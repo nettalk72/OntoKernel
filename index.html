@@ -3,14 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>OntoKernel.org | Core Engine & Kernel Library for Mesh/Branch OS</title>
-
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">  
-  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Android Chrome -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+  <!-- Apple Touch Icon (iOS, iPad) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="OntoKernel.org — Core engine & open kernel library for OntoMotoOS, OntoOmnia, and next-generation mesh/branch intelligence systems.">
   <style>
     body { font-family:'Segoe UI','Malgun Gothic',Arial,sans-serif; background:#f7f8fa; color:#232931; margin:0;}
-    .main { max-width:780px; margin:48px auto; background:#fff; border-radius:17px; box-shadow:0 3px 15px #e7e9f4; padding:42px 30px 34px 30px;}
+    .main { 
+      max-width:780px; 
+      margin:48px auto; 
+      background:#fff; 
+      border-radius:17px; 
+      box-shadow:0 3px 15px #e7e9f4; 
+      padding:42px 30px 34px 30px;
+      position: relative;
+    }
     h1 { color:#175cb7; font-size:2.10em; margin-bottom:7px;}
     h2 { color:#2a3958; font-size:1.17em; margin:31px 0 12px 0;}
     p, li { font-size:1.08em; line-height:1.80;}
@@ -20,161 +36,145 @@
     .menu a { margin-right:18px; font-weight:bold; color:#175cb7;}
     .notice { background:#fffbe6; border-left:6px solid #ffd76b; padding:12px 15px; color:#b69a22; border-radius:6px; margin:15px 0;}
     .footer { margin-top:44px; text-align:center; color:#a4a7b6; font-size:0.98em;}
-    .faq-section { background:#f4f8ff; border-left:5px solid #6da9ff; border-radius:8px; padding:13px 17px 7px 13px; margin:22px 0 22px 0;}
-    .faq-q { font-weight:bold; color:#175cb7; margin-top:10px;}
-    .faq-a { margin-left:8px; color:#245492;}
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      background-color: #f2f9fd;
+      color: #175cb7;
+      border: 1px solid #cce1ff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .lang-toggle:hover {
+      background-color: #e7f5ff;
+      color: #2a3958;
+      box-shadow: 0 1px 8px #e7e9f4;
+    }
+
+    .lang-en { display: inline; }
+    .lang-ko { display: none; }
+
     @media (max-width:600px) {
       .main { padding:13px 5vw 19px 5vw;}
       h1 { font-size:1.34em;}
+      .lang-toggle {
+        top: 10px;
+        right: 10px;
+        font-size: 0.8em;
+      }
     }
   </style>
 </head>
 <body>
   <div class="main">
+    <button id="lang-toggle" class="lang-toggle">
+      <span class="lang-en">한국어</span>
+      <span class="lang-ko">English</span>
+    </button>
     <div class="menu">
-      <a href="#about">About</a>
-      <a href="#engine">Engine</a>
-      <a href="#library">Library</a>
-      <a href="#cases">Cases</a>
-      <a href="#partners">Partners</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="#about"><span class="lang-en">About</span><span class="lang-ko">소개</span></a>
+      <a href="#engine"><span class="lang-en">Engine</span><span class="lang-ko">엔진</span></a>
+      <a href="#library"><span class="lang-en">Library</span><span class="lang-ko">라이브러리</span></a>
+      <a href="#partners"><span class="lang-en">Partners</span><span class="lang-ko">파트너</span></a>
+      <a href="#contact"><span class="lang-en">Contact</span><span class="lang-ko">문의</span></a>
     </div>
-    <h1>OntoKernel.org</h1>
-    <div class="korean">메시/브랜치 OS를 위한 코어 엔진 & 커널 라이브러리 허브</div>
+    <h1><span class="lang-en">OntoKernel.org</span><span class="lang-ko">온토커널.org</span></h1>
+    <div class="korean"><span class="lang-en">Core Engine & Kernel Library for Mesh/Branch OS</span><span class="lang-ko">메시/브랜치 OS를 위한 코어 엔진 & 커널 라이브러리 허브</span></div>
     <div class="block">
-      <b>Welcome!</b> OntoKernel.org is the core engine and open kernel library hub powering OntoMotoOS, OntoOmnia, and next-gen mesh/branch intelligence systems.<br>
-      <span class="korean">OntoKernel.org는 OntoMotoOS, OntoOmnia, 차세대 Mesh/Branch 지능 시스템의 코어 엔진 & 오픈 커널 라이브러리 허브입니다.</span>
+      <b><span class="lang-en">Welcome!</span><span class="lang-ko">환영합니다!</span></b> <span class="lang-en">OntoKernel.org is the core engine and open kernel library hub powering OntoMotoOS, OntoOmnia, and next-gen mesh/branch intelligence systems.</span><span class="lang-ko">OntoKernel.org는 OntoMotoOS, OntoOmnia, 차세대 Mesh/Branch 지능 시스템의 코어 엔진 & 오픈 커널 라이브러리 허브입니다.</span>
     </div>
-
-    <h2 id="about">About OntoKernel.org <span class="korean">| 소개</span></h2>
+    <h2 id="about"><span class="lang-en">About OntoKernel.org</span><span class="lang-ko">온토커널.org 소개</span></h2>
     <ul>
-      <li>Open-source core engine & kernel architecture for mesh/branch ontology OS, meta-operating systems, and collective intelligence platforms.<br>
-        <span class="korean">메시/브랜치 온톨로지 OS, 메타 운영체제, 집단지성 플랫폼을 위한 오픈소스 코어 엔진·커널 아키텍처</span>
+      <li><span class="lang-en">Open-source core engine & kernel architecture for mesh/branch ontology OS, meta-operating systems, and collective intelligence platforms.</span><span class="lang-ko">메시/브랜치 온톨로지 OS, 메타 운영체제, 집단지성 플랫폼을 위한 오픈소스 코어 엔진·커널 아키텍처</span>
       </li>
-      <li>Reference implementation of OntoMesh/Branch algorithms, recursive ethics, and sovereign self-models.<br>
-        <span class="korean">OntoMesh/Branch 알고리즘, 재귀적 윤리, 자율/계보/집단지성 기반 모델의 레퍼런스 구현</span>
+      <li><span class="lang-en">Reference implementation of OntoMesh/Branch algorithms, recursive ethics, and sovereign self-models.</span><span class="lang-ko">OntoMesh/Branch 알고리즘, 재귀적 윤리, 자율/계보/집단지성 기반 모델의 레퍼런스 구현</span>
       </li>
-      <li>Official engine powering <a href="https://ontomotoos.org" target="_blank">OntoMotoOS.org</a>, <a href="https://ontomotoos.ai" target="_blank">OntoMotoOS.ai</a>, and <a href="https://ontoformula.org" target="_blank">OntoFormula.org</a>.<br>
-        <span class="korean">OntoMotoOS.org/ai, OntoFormula.org 등 공식 생태계의 엔진/커널</span>
+      <li><span class="lang-en">Official engine powering </span><a href="https://ontomotoos.org" target="_blank">OntoMotoOS.org</a><span class="lang-en">, </span><a href="https://ontomotoos.ai" target="_blank">OntoMotoOS.ai</a><span class="lang-en">, and </span><a href="https://ontoformula.org" target="_blank">OntoFormula.org</a><span class="lang-en">.</span><span class="lang-ko">OntoMotoOS.org/ai, OntoFormula.org 등 공식 생태계의 엔진/커널</span>
       </li>
       <li>
-        Source code: <a href="https://github.com/nettalk72/ontokernel" target="_blank">GitHub (OntoKernel)</a>
-      </li>        
+        <span class="lang-en">Source code: </span><span class="lang-ko">소스 코드: </span><a href="https://github.com/nettalk72/ontokernel" target="_blank">GitHub (OntoKernel)</a>
+      </li>
     </ul>
-
     <div class="notice">
-      <b>NOTICE:</b>  
-      OntoKernel.org is under development as an open, modular, and auditable core for mesh/branch-based systems.<br>
-      Technical documentation, API, and developer access coming soon.<br>
-      <span class="korean">OntoKernel.org는 오픈·모듈형·검증 가능한 메시/브랜치 기반 시스템의 코어로 개발 중입니다.  
-      기술 문서, API, 개발자 접근은 곧 제공 예정입니다.</span>
+      <b><span class="lang-en">NOTICE:</span><span class="lang-ko">공지:</span></b>
+      <span class="lang-en">OntoKernel.org is under development as an open, modular, and auditable core for mesh/branch-based systems.</span><span class="lang-ko">OntoKernel.org는 오픈·모듈형·검증 가능한 메시/브랜치 기반 시스템의 코어로 개발 중입니다.</span><br>
+      <span class="lang-en">Technical documentation, API, and developer access coming soon.</span><span class="lang-ko">기술 문서, API, 개발자 접근은 곧 제공 예정입니다.</span>
     </div>
-
-    <h2 id="engine">Core Engine <span class="korean">| 코어 엔진</span></h2>
+    <h2 id="engine"><span class="lang-en">Core Engine</span><span class="lang-ko">코어 엔진</span></h2>
     <ul>
-      <li>Recursive mesh/branch structure engine<br>
-        <span class="korean">재귀적 메시/브랜치 구조 엔진</span>
+      <li><span class="lang-en">Recursive mesh/branch structure engine</span><span class="lang-ko">재귀적 메시/브랜치 구조 엔진</span>
       </li>
-      <li>Ontology state machine, mesh networking, identity & relationship core<br>
-        <span class="korean">온톨로지 상태머신, 메시 네트워킹, 정체성·관계 코어</span>
+      <li><span class="lang-en">Ontology state machine, mesh networking, identity & relationship core</span><span class="lang-ko">온톨로지 상태머신, 메시 네트워킹, 정체성·관계 코어</span>
       </li>
-      <li>AI, knowledge graph, logic/ethics protocol integration<br>
-        <span class="korean">AI, 지식그래프, 논리·윤리 프로토콜 연동</span>
+      <li><span class="lang-en">AI, knowledge graph, logic/ethics protocol integration</span><span class="lang-ko">AI, 지식그래프, 논리·윤리 프로토콜 연동</span>
       </li>
     </ul>
-
-    <h2 id="library">Kernel Library <span class="korean">| 커널 라이브러리</span></h2>
+    <h2 id="library"><span class="lang-en">Kernel Library</span><span class="lang-ko">커널 라이브러리</span></h2>
     <ul>
-      <li>Open-source library for mesh/branch algorithm modules<br>
-        <span class="korean">메시/브랜치 알고리즘 모듈의 오픈소스 라이브러리</span>
+      <li><span class="lang-en">Open-source library for mesh/branch algorithm modules</span><span class="lang-ko">메시/브랜치 알고리즘 모듈의 오픈소스 라이브러리</span>
       </li>
-      <li>Pluggable interface for OntoMotoOS, OntoOmnia, and OntoFormula integration<br>
-        <span class="korean">OntoMotoOS, OntoOmnia, OntoFormula 통합을 위한 플러그형 인터페이스</span>
+      <li><span class="lang-en">Pluggable interface for OntoMotoOS, OntoOmnia, and OntoFormula integration</span><span class="lang-ko">OntoMotoOS, OntoOmnia, OntoFormula 통합을 위한 플러그형 인터페이스</span>
       </li>
-      <li>Reference protocols, mathematical formulas, and sample datasets<br>
-        <span class="korean">레퍼런스 프로토콜, 공식, 샘플 데이터셋 제공</span>
+      <li><span class="lang-en">Reference protocols, mathematical formulas, and sample datasets</span><span class="lang-ko">레퍼런스 프로토콜, 공식, 샘플 데이터셋 제공</span>
       </li>
     </ul>
-
-    <h2 id="cases">Case Encyclopedia <span class="korean">| 품질 사례집 · 체크리스트</span></h2>
+    <h2 id="partners"><span class="lang-en">Official Partners</span><span class="lang-ko">공식 파트너</span></h2>
     <ul>
       <li>
-        <a href="case_part1.html" target="_blank">Part 1: Kernel Design · Ethics Integration</a><br>
-        <span class="korean">1부: 커널 설계 · 윤리 통합 체크리스트</span>
+        <a href="https://ontomesh.org" target="_blank">OntoMesh.org</a> — <span class="lang-en">Official Network & Root Domain</span><span class="lang-ko">공식 네트워크/루트 도메인</span>
       </li>
       <li>
-        <a href="case_part2.html" target="_blank">Part 2: Technical Best Practices · Openness</a><br>
-        <span class="korean">2부: 기술 구현 · 오픈소스 운영 베스트 프랙티스</span>
+        <a href="https://ontomotoos.org" target="_blank">OntoMotoOS.org</a> — <span class="lang-en">Open Governance & Community Hub</span><span class="lang-ko">오픈 거버넌스/커뮤니티 허브</span>
       </li>
       <li>
-        <a href="case_part3.html" target="_blank">Part 3: Applied Examples · Evaluation Toolkit</a><br>
-        <span class="korean">3부: 응용 사례 · 평가/운영 도구</span>
+        <a href="https://ontomotoos.ai" target="_blank">OntoMotoOS.ai</a> — <span class="lang-en">Official Engine & AI Platform</span><span class="lang-ko">공식 엔진/AI 플랫폼</span>
+      </li>
+      <li>
+        <a href="https://ontoformula.org" target="_blank">OntoFormula.org</a> — <span class="lang-en">Open Formula & Philosophy Hub</span><span class="lang-ko">공식 공식/철학/수식 허브</span>
+      </li>
+      <li>
+        <a href="https://dotnetone.com" target="_blank">dotnetone.com</a> — <span class="lang-en">Global Expert Network</span><span class="lang-ko">글로벌 전문가 네트워크</span>
+      </li>
+      <li>
+        <a href="https://dotnetxpert.com" target="_blank">dotnetxpert.com</a> — <span class="lang-en">Next-Gen Expert Platform</span><span class="lang-ko">차세대 전문가 플랫폼</span>
       </li>
     </ul>
-    
-    <h2 id="partners">Official Partners <span class="korean">| 공식 파트너</span></h2>
-    <ul>
-      <li>
-        <a href="https://ontomesh.org" target="_blank">OntoMesh.org</a> — Official Network & Root Domain  
-        <br><span class="korean">공식 네트워크/루트 도메인</span>
-      </li>
-      <li>
-        <a href="https://ontomotoos.org" target="_blank">OntoMotoOS.org</a> — Open Governance & Community Hub
-        <br><span class="korean">오픈 거버넌스/커뮤니티 허브</span>
-      </li>
-      <li>
-        <a href="https://ontomotoos.ai" target="_blank">OntoMotoOS.ai</a> — Official Engine & AI Platform
-        <br><span class="korean">공식 엔진/AI 플랫폼</span>
-      </li>
-      <li>
-        <a href="https://ontoformula.org" target="_blank">OntoFormula.org</a> — Open Formula & Philosophy Hub
-        <br><span class="korean">공식 공식/철학/수식 허브</span>
-      </li>
-      <li>
-        <a href="https://dotnetone.com" target="_blank">dotnetone.com</a> — Global Expert Network
-        <br><span class="korean">글로벌 전문가 네트워크</span>
-      </li>
-      <li>
-        <a href="https://dotnetxpert.com" target="_blank">dotnetxpert.com</a> — Next-Gen Expert Platform
-        <br><span class="korean">차세대 전문가 플랫폼</span>
-      </li>
-      <li>
-        <a href="https://nettalk83.substack.com/" target="_blank">nettalk83.substack.com</a> — Official Blog, Essays, Archive
-        <br><span class="korean">공식 블로그/뉴스/에세이 아카이브</span>
-      </li>
-    </ul>
-
-    <h2 id="faq">FAQ <span class="korean">| 자주 묻는 질문</span></h2>
-    <div class="faq-section">
-      <div class="faq-q">Q. 공식 기술 아카이브/뉴스, 최신 해설은 어디서 볼 수 있나요?</div>
-      <div class="faq-a">
-        공식 블로그·뉴스레터·기술 아카이브는 <a href="https://nettalk83.substack.com/" target="_blank">nettalk83.substack.com</a>에서 열람할 수 있습니다.
-        <br><span class="korean">공식 에세이, 해설, 기술 소식은 모두 서브스택에서 제공됩니다.</span>
-      </div>
-      <div class="faq-q">Q. 누구나 커널에 기여할 수 있나요?</div>
-      <div class="faq-a">
-        네, <a href="https://github.com/nettalk72/ontokernel" target="_blank">GitHub (OntoKernel)</a>에서 포크, PR, 제안, 기술 토론이 모두 가능합니다.
-        <br><span class="korean">공식 깃허브에서 자유롭게 참여 및 제안이 가능합니다.</span>
-      </div>
-    </div>
-
-    <h2 id="contact">Contact <span class="korean">| 문의</span></h2>
+    <h2 id="contact"><span class="lang-en">Contact</span><span class="lang-ko">문의</span></h2>
     <div>
-      For technical questions, collaboration, or early access:<br>
+      <span class="lang-en">For technical questions, collaboration, or early access:</span><span class="lang-ko">기술 문의, 협업, 얼리액세스 신청:</span><br>
       <b id="email"></b><br>
-      <span class="korean">기술 문의, 협업, 얼리액세스 신청:</span>
     </div>
     <script>
       document.getElementById("email").innerHTML = "nettalk72" + "&#64;" + "naver.com";
+
+      const langToggleButton = document.getElementById('lang-toggle');
+      const langEnElements = document.querySelectorAll('.lang-en');
+      const langKoElements = document.querySelectorAll('.lang-ko');
+      let currentLang = 'en';
+
+      // Initial setup
+      langEnElements.forEach(el => el.style.display = 'inline');
+      langKoElements.forEach(el => el.style.display = 'none');
+
+      langToggleButton.addEventListener('click', () => {
+          if (currentLang === 'en') {
+              currentLang = 'ko';
+              langEnElements.forEach(el => el.style.display = 'none');
+              langKoElements.forEach(el => el.style.display = 'inline');
+          } else {
+              currentLang = 'en';
+              langEnElements.forEach(el => el.style.display = 'inline');
+              langKoElements.forEach(el => el.style.display = 'none');
+          }
+      });
     </script>
-    <div class="community">
-      <b>Community Discussions:</b>
-      <a href="https://github.com/nettalk72/ontokernel/discussions" target="_blank">GitHub Discussions</a><br>
-      <span class="korean">커뮤니티 토론방: 깃허브 Discussions에서 자유롭게 질문/토론/제안이 가능합니다.</span>
-    </div>
     <div class="footer">
-      &copy; 2025 OntoKernel.org · Mesh/Branch Intelligence Engine & Open Kernel Library
+      <span class="lang-en">&copy; 2025 OntoKernel.org · Mesh/Branch Intelligence Engine & Open Kernel Library</span><span class="lang-ko">&copy; 2025 온토커널.org · 메시/브랜치 지능 엔진 & 오픈 커널 라이브러리</span>
     </div>
   </div>
 </body>
